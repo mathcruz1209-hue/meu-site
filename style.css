@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #3b084d;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* LOGIN */
+#login {
+    margin-top: 150px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #e2e2e2;
+}
+
+#erro {
+    color: red;
+}
+
+/* CONTEÚDO */
+#conteudo {
+    display: none;
+}
+
+/* CONTADOR */
+#contador {
+    margin-top: 30px;
+}
+
+#tempo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e60023;
+}
+
+/* GALERIA */
+.galeria {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 40px auto;
+}
+
+.foto-grande {
+    width: 220px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.foto {
+    width: 90px;
+    border-radius: 10px;
+    position: absolute;
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+.p1 { top: 0; left: 20px; }
+.p2 { top: 50px; right: 0; }
+.p3 { bottom: 0; left: 60px; }
+.p4 { bottom: 40px; right: 40px; }
+
+/* ANIMAÇÃO */
+@keyframes flutuar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+/* QUADRO DA MÚSICA */
+.musica {
+    position: fixed;
+    top: 60px;
+    left: 40px;
+    width: 320px;
+    background-color: #ffffff;
+    border: 6px solid #c9a14a;
+    padding: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    font-family: 'Georgia', serif;
+    text-align: left;
+}
+
+.musica img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.musica p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    text-align: left;   /* ISSO resolve */
+}
+.galeria {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto-grande {
+    width: 300px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.galeria-baixo .fotos-pequenas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; /* não centraliza mais */
+    margin-left: 80px; /* empurra pra direita */
+    max-width: 40px;
+}
