@@ -78,7 +78,7 @@ input {
 .musica {
     position: absolute;
     top: 60px;
-    right: 100px;
+    right: -100px;
     width: 320px;
     background-color: #ffffff;
     border: 6px solid #c9a14a;
@@ -189,32 +189,3 @@ input {
   opacity: 0.9;
 }
 
-/* CENTRO */
-.center-photos {
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-/* DIREITA */
-.right-card {
-  width: 25%;
-}
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left-text,
-  .center-photos,
-  .right-card {
-    width: 100%;
-    text-align: center;
-  }
-
-  .left-text {
-    margin-bottom: 30px;
-  }
-}
