@@ -76,9 +76,9 @@ input {
 
 /* QUADRO DA MÚSICA */
 .musica {
-    position: fixed;
+    position: absolute;
     top: 60px;
-    left: 40px;
+    right: 100px;
     width: 320px;
     background-color: #ffffff;
     border: 6px solid #c9a14a;
@@ -119,4 +119,102 @@ input {
     justify-content: flex-start; /* não centraliza mais */
     margin-left: 80px; /* empurra pra direita */
     max-width: 40px;
+}
+.love-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  animation: pulse 2s infinite;
+}
+
+.heart span {
+  position: absolute;
+  right: 90%;
+  top: 50%;
+  transform-origin: left top;
+  color: #ff9ecf;
+  font-size: 1.1rem;
+  white-space: nowrap;
+  animation: rotate 8s linear infinite;
+}
+
+.heart span:nth-child(1) { transform: rotate(0deg) translate(80px); }
+.heart span:nth-child(2) { transform: rotate(45deg) translate(80px); }
+.heart span:nth-child(3) { transform: rotate(90deg) translate(80px); }
+.heart span:nth-child(4) { transform: rotate(135deg) translate(80px); }
+.heart span:nth-child(5) { transform: rotate(180deg) translate(80px); }
+.heart span:nth-child(6) { transform: rotate(225deg) translate(80px); }
+.heart span:nth-child(7) { transform: rotate(270deg) translate(80px); }
+.heart span:nth-child(8) { transform: rotate(315deg) translate(80px); }
+
+@keyframes rotate {
+  from { transform: rotate(0deg) translate(80px); }
+  to { transform: rotate(360deg) translate(80px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 40px;
+}
+
+/* TEXTO ESQUERDA */
+.left-text {
+  width: 50%;
+  color: #f1f1f1;
+}
+
+.left-text h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.left-text p {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* CENTRO */
+.center-photos {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+/* DIREITA */
+.right-card {
+  width: 25%;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-text,
+  .center-photos,
+  .right-card {
+    width: 100%;
+    text-align: center;
+  }
+
+  .left-text {
+    margin-bottom: 30px;
+  }
 }
